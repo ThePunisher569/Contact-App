@@ -13,7 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".ContactsInfo"></activity>
-        <activity android:name=".ContactList" />
+
         <activity android:name=".CreateContact" />
         <activity android:name=".Register" />
         <activity android:name=".Login">

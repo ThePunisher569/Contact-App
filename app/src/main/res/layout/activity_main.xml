@@ -16,20 +16,30 @@
         android:textSize="20sp"
         android:textStyle="bold" />
 
-    <Button
-        android:id="@+id/btnCreateContact"
+
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:background="@drawable/buttons"
-        android:text="Create a new Contact"
-        android:textSize="18sp" />
-    <Button
-        android:id="@+id/btnContactList"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:background="@drawable/buttons"
-        android:text="Contact List"
-        android:textSize="18sp" />
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rvList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:fadeScrollbars="true"
+            android:scrollbars="vertical" />
+
+        <ImageButton
+            android:id="@+id/ibCreateContact"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:background="@drawable/fab"
+            app:srcCompat="@drawable/plus_icon"
+            android:layout_gravity="end|bottom"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="15dp"/>
+    </FrameLayout>
+
+
 </LinearLayout>
+

@@ -3,6 +3,7 @@ package com.example.backendlessapp;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
+import android.content.Intent;
 import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -28,7 +29,7 @@ public class CreateContact extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_contact);
 
-
+        final Intent intent = getIntent();
         mLoginFormView = findViewById(R.id.login_form);
         mProgressView = findViewById(R.id.login_progress);
         tvLoad = findViewById(R.id.tvLoad);
@@ -63,6 +64,7 @@ public class CreateContact extends AppCompatActivity {
                             etCreateEmail.setText(null);
                             etCreateName.setText(null);
                             etCreatePhone.setText(null);
+                            setResult(RESULT_OK,intent);
                         }
 
                         @Override

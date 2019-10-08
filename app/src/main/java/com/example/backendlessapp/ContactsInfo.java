@@ -61,7 +61,7 @@ public class ContactsInfo extends AppCompatActivity {
         btnSubmit.setVisibility(View.GONE);
 
         final Intent intent = getIntent();
-        final int index =intent.getIntExtra("index",0);
+        final int index = intent.getIntExtra("index",0);
         tvInfoChar.setText(ContactApplication.list.get(index).getName().charAt(0)+"");
         tvInfoName.setText(ContactApplication.list.get(index).getName()+"");
 
@@ -110,7 +110,8 @@ public class ContactsInfo extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 final AlertDialog.Builder dialog = new AlertDialog.Builder(ContactsInfo.this);
-                dialog.setMessage("are you sure to delete this contact?");
+                dialog.setMessage("Do you want to delete this contact?");
+
                 dialog.setNegativeButton("No", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
