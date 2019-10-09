@@ -161,6 +161,7 @@ public class MainActivity extends AppCompatActivity implements ContactAdapter.It
                 queryBuilder.setWhereClause(whereClause);
 
                 queryBuilder.setGroupBy("name");
+		queryBuilder.setPageSize(100);
 
                 dialog.setMessage("Getting contacts...please wait...");
                 dialog.show();
