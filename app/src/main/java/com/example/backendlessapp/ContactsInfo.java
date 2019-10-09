@@ -28,8 +28,8 @@ public class ContactsInfo extends AppCompatActivity {
     private View mProgressView;
     private View mLoginFormView;
     private TextView tvLoad;
-    private ImageButton ibCall,ibMail,ibEdit,ibDelete;
-    private TextView tvInfoChar,tvInfoName;
+    ImageButton ibCall,ibMail,ibEdit,ibDelete;
+    TextView tvInfoChar,tvInfoName;
     private EditText etInfoName,etInfoMail,etInfoPhone;
     private Button btnSubmit;
 
@@ -122,7 +122,7 @@ public class ContactsInfo extends AppCompatActivity {
                 dialog.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        tvLoad.setText("Deleting the contact... please wait...");
+                        tvLoad.setText("Deleting the contact...please wait...");
                         showProgress(true);
 
                         Backendless.Persistence.of(Contact.class).remove(ContactApplication.list.get(index), new AsyncCallback<Long>() {
